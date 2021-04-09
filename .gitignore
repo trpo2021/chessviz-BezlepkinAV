@@ -31,4 +31,4 @@
 *.out
 *.app
 *all_sort
-bin/*
+bin/chessviz
