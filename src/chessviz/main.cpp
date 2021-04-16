@@ -9,13 +9,14 @@ int main()
     display(board);
     cout << endl;
     char v[5];
-    while(cin >> v){
-        if(strcmp(v,"quit") == 0)
+    while (cin >> v)
+    {
+        if (strcmp(v, "quit") == 0)
         {
             cout << endl;
             break;
         }
-        move(v,board);
+        move(v, board);
         cout << endl;
     }
     return 0;
