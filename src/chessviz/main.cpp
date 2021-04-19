@@ -11,9 +11,9 @@ int main()
     char v[5];
     while (cin >> v) {
         if (strcmp(v, "quit") == 0) {
-             cout << endl;
-             break;
-         }
+            cout << endl;
+            break;
+        }
         move(v, board);
         cout << endl;
     }
