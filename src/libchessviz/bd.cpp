@@ -1,13 +1,12 @@
 #include "library.hpp"
 void bd(char board[9][9])
 {
-    //char board[n][n];
+    // char board[n][n];
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             board[i][j] = ' ';
-  
     board[0][0] = '8';
-    board[1][0] = '7'; 
+    board[1][0] = '7';
     board[2][0] = '6';
     board[3][0] = '5';
     board[4][0] = '4';
@@ -17,7 +16,7 @@ void bd(char board[9][9])
     board[8][0] = ' ';
 
     board[8][0] = ' ';
-    board[8][1] = 'A'; 
+    board[8][1] = 'A';
     board[8][2] = 'B';
     board[8][3] = 'C';
     board[8][4] = 'D';
@@ -47,8 +46,7 @@ void bd(char board[9][9])
     board[0][5] = 'k';
     board[7][5] = 'K';
 
-    for (int i = 1; i < n; i++)
-    {
+    for (int i = 1; i < n; i++) {
         board[1][i] = 'p';
         board[6][i] = 'P';
     }
