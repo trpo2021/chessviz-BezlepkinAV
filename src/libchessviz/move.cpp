@@ -3,7 +3,7 @@
 int bishop(char v[5],char board[9][9],int x1,int x2);
 int king(char v[5],char board[9][9],int x1,int x2);
 int knight(char v[5],char board[9][9],int x1,int x2);
-int pawns(char v[5],char board[9][9],int x1,int x2);
+int pawns(char v[5],char board[9][9]);
 int queen(char v[5],char board[9][9],int x1,int x2);
 int rook(char v[5],char board[9][9],int x1,int x2);
 
@@ -71,7 +71,7 @@ void move(char v[5], char board[9][9])
     else if (temp == 81 || temp == 113)
         knight(v,board,x1,x2);
     else if (temp == 80 || temp == 112)
-        pawns(v,board,x1,x2);
+        pawns(v,board);
     else if (temp == 81 || temp == 113)
         queen(v,board,x1,x2);
     else if (temp == 82 || temp == 114)
