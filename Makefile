@@ -38,9 +38,16 @@ obj/src/libchessviz/queen.o: src/libchessviz/queen.cpp
 obj/src/libchessviz/rook.o: src/libchessviz/rook.cpp
 	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
+bin/test.bin: test/testmain.o obj/libhello.a test/test.o
+	$(CC) $(CFLAGS) -o $@ $^
+test/testmain.o: test/main.c
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+test/test.o: test/test.c
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+
 .PHONY : clean
 
 clean:
-	rm -rf obj/src/libchessviz/*.o obj/src/chessviz/*.o bin/chessviz
+	rm -rf obj/src/libchessviz/*.o obj/src/chessviz/*.o bin/chessviz bin/test.bin obj/*.o obj/*.a test/*.o
 
 -include main.d bd.d display.d move.d bishop.d king.d knight.d pawns.d queen.d rook.d
