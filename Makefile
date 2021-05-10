@@ -38,7 +38,7 @@ obj/src/libchessviz/queen.o: src/libchessviz/queen.cpp
 obj/src/libchessviz/rook.o: src/libchessviz/rook.cpp
 	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
-.PHONY : clean
+.PHONY : clean 
 
 clean:
 	rm -rf obj/src/libchessviz/*.o obj/src/chessviz/*.o bin/chessviz
