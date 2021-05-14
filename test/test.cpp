@@ -1,9 +1,11 @@
-#include "src/libchessviz/library.hpp"
-#include <ctest.h>
+#include "libchessviz/library.hpp"
+#include "ctest.h"
 
-CTEST(figure_test, rook)
+int rook(char v[5], char board[9][9]);
+
+CTEST(figure_test, rookc)
 {
-    const int expected = 1;
+    const int expected = 0;
     char board[9][9]
             = {{'8', 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
                {'7', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},

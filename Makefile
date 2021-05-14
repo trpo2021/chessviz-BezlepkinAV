@@ -19,7 +19,6 @@ obj/src/libchessviz/display.o: src/libchessviz/display.cpp
 obj/src/libchessviz/move.o: src/libchessviz/move.cpp
 	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
-
 obj/src/libchessviz/bishop.o: src/libchessviz/bishop.cpp
 	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
@@ -38,14 +37,18 @@ obj/src/libchessviz/queen.o: src/libchessviz/queen.cpp
 obj/src/libchessviz/rook.o: src/libchessviz/rook.cpp
 	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
-bin/test.bin: test/testmain.o obj/libhello.a test/test.o
-	$(CC) $(CFLAGS) -o $@ $^
-test/testmain.o: test/main.c
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
-test/test.o: test/test.c
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+test: bin/test.bin
 
-.PHONY : clean
+bin/test.bin: test/testmain.o obj/libhello.a test/test.o
+	$(CXX) $(CFLAGS) -o $@ $^
+
+test/testmain.o: test/main.cpp
+	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -I thirdparty -o $@ $<
+
+test/test.o: test/test.cpp
+	$(CXX) -c $(CFLAGS) $(CPPFLAGS) -I thirdparty -o $@ $<
+
+.PHONY : clean test
 
 clean:
 	rm -rf obj/src/libchessviz/*.o obj/src/chessviz/*.o bin/chessviz bin/test.bin obj/*.o obj/*.a test/*.o
