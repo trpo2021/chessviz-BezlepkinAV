@@ -39,7 +39,7 @@ obj/src/libchessviz/rook.o: src/libchessviz/rook.cpp
 
 test: bin/test.bin
 
-bin/test.bin: test/testmain.o obj/libhello.a test/test.o
+bin/test.bin: test/testmain.o test/test.o obj/libhello.a
 	$(CXX) $(CFLAGS) -o $@ $^
 
 test/testmain.o: test/main.cpp

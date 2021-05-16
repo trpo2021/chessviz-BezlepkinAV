@@ -1,2 +1,2 @@
 
-int bishop(char v[5], char board[9][9]);
+int king(char v[5], char board[9][9]);
