@@ -1,11 +1,11 @@
 #include "library.hpp"
 
-int bishop(char v[5],char board[9][9]);
-int king(char v[5],char board[9][9]);
-int knight(char v[5],char board[9][9]);
-int pawns(char v[5],char board[9][9]);
-int queen(char v[5],char board[9][9]);
-int rook(char v[5],char board[9][9]);
+int bishop(char v[5], char board[9][9]);
+int king(char v[5], char board[9][9]);
+int knight(char v[5], char board[9][9]);
+int pawns(char v[5], char board[9][9]);
+int queen(char v[5], char board[9][9]);
+int rook(char v[5], char board[9][9]);
 
 void move(char v[5], char board[9][9])
 {
@@ -65,22 +65,22 @@ void move(char v[5], char board[9][9])
     // }
 
     if (temp == 66 || temp == 98)
-        bishop(v,board);
+        bishop(v, board);
     else if (temp == 75 || temp == 107)
-        king(v,board);
+        king(v, board);
     else if (temp == 81 || temp == 113)
-        knight(v,board);
+        knight(v, board);
     else if (temp == 80 || temp == 112)
-        pawns(v,board);
+        pawns(v, board);
     else if (temp == 81 || temp == 113)
-        queen(v,board);
+        queen(v, board);
     else if (temp == 82 || temp == 114)
-        rook(v,board);
+        rook(v, board);
     else {
         system("clear");
         exit(0);
     }
-    
+
     // cout << x1 << " " << x2 << endl;
     // Ладья
     // if (temp == 82 || temp == 114) {
@@ -120,7 +120,8 @@ void move(char v[5], char board[9][9])
     // }
     // Ферзь
     // else if (temp == 81 || temp == 113) {
-    //     if (((x1 != x2 && v[1] == v[4]) || (x1 == x2 && v[1] != v[4])) || (abs (x1 - x2) == abs (v[1] - v[4]))) {
+    //     if (((x1 != x2 && v[1] == v[4]) || (x1 == x2 && v[1] != v[4])) ||
+    //     (abs (x1 - x2) == abs (v[1] - v[4]))) {
     //         board[56 - v[1]][9 - (104 - v[0] + 1)] = ' ';
     //         board[56 - v[4]][9 - (104 - v[3] + 1)] = temp;
     //         display(board);
@@ -132,7 +133,8 @@ void move(char v[5], char board[9][9])
     // }
     // Конь
     // else if (temp == 81 || temp == 113) {
-    //     if ((abs(x1 - x2) == 1 && abs(v[1] - v[4]) == 2) || ((abs(x1 - x2) == 2 && abs(v[1] - v[4]) == 1))) {
+    //     if ((abs(x1 - x2) == 1 && abs(v[1] - v[4]) == 2) || ((abs(x1 - x2) ==
+    //     2 && abs(v[1] - v[4]) == 1))) {
     //         board[56 - v[1]][9 - (104 - v[0] + 1)] = ' ';
     //         board[56 - v[4]][9 - (104 - v[3] + 1)] = temp;
     //         display(board);

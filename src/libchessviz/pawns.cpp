@@ -7,8 +7,7 @@ int pawns(char v[5], char board[9][9])
         board[56 - v[4]][9 - (104 - v[3] + 1)] = temp;
         display(board);
         return 0;
-    }
-    else {
+    } else {
         return 1;
     }
 }

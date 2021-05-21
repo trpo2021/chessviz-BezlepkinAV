@@ -1,5 +1,5 @@
-#include "libchessviz/library.hpp"
 #include "ctest.h"
+#include "libchessviz/library.hpp"
 
 CTEST(figure_test, rookc)
 {

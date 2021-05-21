@@ -2,7 +2,8 @@
 
 void display(char board[9][9]);
 
-int main() {
+int main()
+{
     char board[9][9];
     bd(board);
     display(board);
