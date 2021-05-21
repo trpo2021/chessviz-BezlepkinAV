@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+*.bin
 *all_sort
 bin/chessviz
 bin/test.bin
